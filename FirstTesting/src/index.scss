@@ -1,0 +1,114 @@
+$iconBarBack : hsl(0, 0%, 99%);
+$iconBarHov: hsl(0, 0%, 95%);
+$iconBarAct: hsl(0, 0%, 90%);
+$iconBarCol: hsl(0, 0%, 65%);
+$iconBarShadow : 0.5px 0.5px 0 hsl(0, 0%, 65%);
+
+body {
+    margin: 0;
+}
+
+//Customization for vertical icon bar panel:
+.icon-bar {
+    width: 70px;
+    position: fixed;
+    top: 15%;
+    left: 0;
+    background-color: $iconBarBack;
+    box-shadow: $iconBarShadow;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    color: $iconBarCol;
+    font-size: 30px;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+
+.icon-bar a:hover {
+    background-color: $iconBarHov;
+}
+
+.active {
+    background-color: $iconBarAct;
+}
+
+//Customization for horizontal icon bar panel:
+$hrzBarBack : hsl(157, 70%, 50%);
+$hrzBarHov: hsl(157, 70%, 40%);
+$hrzBarAct: hsl(157, 70%, 30%);
+
+.icon-bar-hrz {
+    width: 100%;
+    background-color: $hrzBarBack;
+    box-shadow: $iconBarShadow;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.icon-bar-hrz a {
+    float: left;
+    width: 11.25%;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 10px;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+
+.icon-bar-hrz a:hover {
+    background-color: $hrzBarHov;
+}
+
+.active-hrz {
+    background-color: $hrzBarAct;
+}
+
+//Animatable button:
+$animBtnBack : linear-gradient(to bottom, #33cc33 0%, #333300 100%);
+
+.animBtn {
+    display: inline-block;
+    cursor: pointer;
+    margin: 200px ;
+    
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: #000000;
+    margin: 6px 0;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-9px, 2px);
+    -webkit-transform: rotate(-45deg) translate(-9px, 2px);
+    -moz-transform: rotate(-45deg) translate(-9px, 2px);
+    -o-transform: rotate(-45deg) translate(-9px, 2px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: rotate(45deg) translate(-8px, -4px);
+    -webkit-transform: rotate(45deg) translate(-8px, -4px);
+    -moz-transform: rotate(45deg) translate(-8px, -4px);
+    -o-transform: rotate(45deg) translate(-8px, -4px);
+}
